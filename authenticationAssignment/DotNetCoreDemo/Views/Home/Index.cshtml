@@ -1,0 +1,27 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+	@if (ViewBag.Status == "NotLoggedIn")
+	{
+		<form method="post" action="Home/Login">
+
+			<div class="input-group">
+			<input id="txtUserName" name="username" placeholder="username" class="form-control" />
+
+				<div class="input-group-append">
+					<span class="input-group-text">gmail.com</span>
+				</div>
+			</div>
+			
+			<input id="txtPossword" name="possword" placeholder="possword" class="form-control" />
+			<button class="btn btn-danger" type="submit">Login</button>
+		</form>
+	}
+	else
+	{
+		<h1>Welcome User, you are already LoggedIn</h1>
+	}
+
+</div>
